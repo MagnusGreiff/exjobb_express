@@ -13,6 +13,7 @@ dummytOriginCountry=('Sverige' 'Danmark' 'Finland' 'Norge' 'Tyskland' 'Nya Zeela
 dummyColor=('Rosa' 'Lila' 'Grön' 'Blå' 'Gul' 'Ljusblå' 'Vit' 'Svart')
 dummyComplete=('INSERT INTO Product(`productManufacturer`, `productName`, `productOriginCountry`, `productWeight`, `productSize`, `productSellPrize`, `productBuyPrize`, `productColor`, `productAmount`, `productCategoryID`, `productGender`, `productDeleted`) VALUES ')
 
+counter=0
 
 for _ in $(seq 1 ${amount});
 do
@@ -40,10 +41,8 @@ do
     ${RANDOMGENDER},
     'false'),
     ")
-    #echo The counter is $COUNTERALL
-    #let COUNTERALL=COUNTERALL+1
-
-    # echo $RANDOMCATEGORY >> test.txt
+    echo " $counter "
+    counter=$[$counter +1]
 done
 
 echo ${dummyComplete[@]} | sed -e '$s/,$//' > ${filename}.sql
