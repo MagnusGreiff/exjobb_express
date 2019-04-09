@@ -1,0 +1,23 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+    <p>Welcome to
+        {{title}}</p>
+    {% for row in rows %}
+        {# <p>{{row.roleID}}</p> #}
+        <li>{{ row.productID }}|
+            {{ row.productManufacturer }}|
+            {{ row.productName }}|
+            {{ row.productOriginCountry }}|
+            {{ row.productWeight }}|
+            {{ row.productSize }}|
+            {{ row.productSellPrize }}|
+            {{ row.productBuyPrize }}|
+            {{ row.productColor }}|
+            {{ row.productAmount }}|
+            {{ row.productCategoryID }}|
+            {{ row.productGender }}|
+            {{ row.productDeleted }}</li>
+    {% endfor %}
+{% endblock %}
