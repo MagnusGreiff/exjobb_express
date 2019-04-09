@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "How many rows do you want?: "
-read amount
+#echo "How many rows do you want?: "
+amount="$1"
 
-echo "File name: "
-read filename
+#echo "File name: "
+filename="$2"
 
 dummySize=(XS S M L XL XXL)
 dummyCategoryName=('' '' '' '' '' '' '' '' '' '' '' '' 'Shorts' 'Jeans' 'Träningsbyxa' 'Trosa' 'BH' 'Nattlinne' 'T-shirt' 'Sweatshirt' 'Cardigan' 'Linne' 'Långklänning' 'Korta klänning' 'Vinterjacka' 'Skinnjacka' 'Jacka' 'Skinnväska' 'Ryggsäck' 'Shorts' 'Jeans' 'Träningsbyxa' 'T-shirt' 'Sweatshirt' 'Cardigan' 'Linne' 'Y-front' 'Boxershort' 'Vinterjacka' 'Skinnjacka' 'Jacka' 'Kostym' 'Skinnväska' 'Ryggsäck')
