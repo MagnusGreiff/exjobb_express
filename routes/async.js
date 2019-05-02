@@ -13,10 +13,7 @@ router.get('/', (req, res, next) => {
         console.log(os.freemem())
 
         // if (err) throw err
-        res.render('index', {
-            title: 'Async',
-            rows: rows
-        });
+        res.json(rows)
 
         /* const used = process.memoryUsage();
         for (let key in used) {

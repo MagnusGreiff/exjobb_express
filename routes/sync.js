@@ -7,16 +7,8 @@ const os = require('os');
 router.get('/', async (req, res, next) => {
   await connection.query('SELECT * from Product', (err, rows, fields) => {
 
-
-    console.log(os.cpus());
-    console.log(os.totalmem());
-    console.log(os.freemem())
-
     // if (err) throw err
-    res.render('index', {
-      title: 'Sync',
-      rows: rows
-    });
+    res.json(rows)
 
     /* const used = process.memoryUsage();
     for (let key in used) {
