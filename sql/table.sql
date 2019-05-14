@@ -5,7 +5,7 @@ USE exjobb;
 
 SET NAMES utf8;
 
-CREATE TABLE IF NOT EXISTS Product (
+CREATE TABLE IF NOT EXISTS product (
 	`productID` INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `productManufacturer` VARCHAR(80) NOT NULL,
     `productName` VARCHAR(80) NOT NULL,

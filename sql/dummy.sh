@@ -41,7 +41,6 @@ do
     ${RANDOMGENDER},
     'false'),
     ")
-    echo " $counter "
     counter=$[$counter +1]
 done
 
